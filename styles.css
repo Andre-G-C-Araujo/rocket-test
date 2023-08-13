@@ -93,10 +93,8 @@ body {
     }
 
     > img {
-      display: block;
-      margin: auto;
-      height: 81px;
-      width: 81px;
+      width: 8.1rem;
+      height: 8.1rem;
     }
   }
 }
@@ -189,6 +187,8 @@ body {
       > img {
         display: block;
         margin: auto;
+        width: 8.1rem;
+        height: 8.1rem;
       }
     }
   }
