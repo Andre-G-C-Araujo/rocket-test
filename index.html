@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="light">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,15 +15,8 @@
     <title>Explore Sem Limites</title>
   </head>
   <body>
-    <div class="container" onclick="changeBackground()">
-      <div class="rightContentTop" id="rightContent">
-        <img
-          class="astronaut"
-          src="./assets/astronaut-mobile.png"
-          alt="Foto de um astronauta"
-          id="astronauta"
-        />
-      </div>
+    <div class="container" onclick="toggleMode()">
+      <div class="rightContentTop"></div>
       <div class="leftContentTop">
         <h1>Explore sem limites</h1>
         <h3>Porque o aprendizado é contínuo</h3>
@@ -66,8 +59,8 @@
     </div>
     <div class="contactUs">
       <h1>Entre em contato</h1>
-      <input type="text" placeholder="Digite seu nome" />
-      <input type="email" placeholder="Digite seu E-mail" />
+      <input type="text" placeholder="Digite seu nome" class="inputName" />
+      <input type="email" placeholder="Digite seu E-mail" class="inputEmail" />
       <textarea
         name="message"
         id="message"
@@ -76,7 +69,8 @@
         placeholder="Digite sua mensagem aqui..."
       ></textarea>
       <button>Enviar Mensagem</button>
-      <footer>@2023 Feito por Andre Caue</footer>
+
+      <footer>@2023 - Feito por Andre Caue</footer>
     </div>
 
     <script src="./index.js"></script>

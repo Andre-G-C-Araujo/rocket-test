@@ -17,7 +17,11 @@
   --hugeSize-: 70rem;
   --enorme-: 120rem;
 
-  --bg-mobile-: url(./assets/mobile img/image 11970.png);
+  --firstSizebg-: 83.6rem;
+  --bg-url-: url(./assets/astronaut-mobile.png);
+  --bg-contact-: url(./assets/bg-contact.jpg);
+  --bg-inputName-: url(./assets/person.svg);
+  --bg-inputEmail-: url(./assets/at.svg);
 }
 
 body {
@@ -29,13 +33,10 @@ body {
 .container {
   width: var(--bigSize-);
   height: var(--hugeSize);
-
-  background: #f9f4fb;
   .rightContentTop {
-    > .astronaut {
-      display: block;
-      margin: auto;
-    }
+    height: 38rem;
+    background: #f9f4fb var(--bg-url-) no-repeat right;
+    background-position: right;
   }
   .leftContentTop {
     > h1 {
@@ -110,6 +111,13 @@ body {
 
   background: #f9f4fb;
 
+  > .inputName {
+    background: #fff var(--bg-inputName-) no-repeat left;
+  }
+  > .inputEmail {
+    background: #fff var(--bg-inputEmail-) no-repeat left;
+  }
+
   > h1 {
     padding: var(--sizeSmallB-) var(--sizeSmallB-) var(--sizeSmallB-)
       var(--sizeMediumB-);
@@ -177,6 +185,10 @@ body {
 @media (min-width: 650px) {
   :root {
     --bigSize-: 100%;
+    --bg-url-: url(./assets/astronaut.desk.png);
+  }
+  .light {
+    --bg-url-: url(./assets/astronaut-desk.png);
   }
 
   body {
@@ -186,43 +198,95 @@ body {
   .container {
     display: flex;
     flex-direction: row-reverse;
+    height: var(--firstSizebg-);
+    background: #f9f4fb;
+    .rightContentTop {
+      height: 100%;
+      background: #f9f4fb var(--bg-url-) no-repeat top right;
+      margin-right: 5rem;
+    }
 
     .rightContentTop,
     .leftContentTop {
-      border: red solid 1px;
       width: 50%;
     }
-
-    .middleContent {
+    .leftContentTop {
       display: flex;
+      flex-direction: column;
 
-      > .firstGrid,
-      .secondGrid,
-      .thirdGrid {
-        width: var(--hugeSize-);
-        > h1 {
-          text-align: center;
-        }
-        > img {
-          width: 8.1rem;
-          height: 8.1rem;
-        }
+      background: #f9f4fb;
+
+      height: 100%;
+
+      > h1 {
+        margin: auto auto 0 auto;
+        font-size: 6rem;
+      }
+      > h3 {
+        margin: 0 auto auto auto;
+        font-size: 3.2rem;
+      }
+
+      > img {
+        margin-left: 5%;
+        margin-bottom: 5%;
       }
     }
+  }
 
-    .contactUs {
+  .middleContent {
+    display: flex;
+    height: 100%;
+    > .firstGrid,
+    .secondGrid,
+    .thirdGrid {
+      width: 36.6rem;
+      height: 43.8rem;
+      padding: 3rem;
+      margin: 6rem;
       > h1 {
+        font-size: 4rem;
         text-align: center;
       }
-      > input {
-        width: var(--hugeSize-);
+      > p {
+        font-size: 2rem;
       }
-      > textarea {
-        width: var(--hugeSize-);
-      }
-      > button {
+      > img {
         margin: auto;
+        width: 8.1rem;
+        height: 8.1rem;
       }
+    }
+    .firstGrid {
+      margin-left: auto;
+    }
+    .thirdGrid {
+      margin-right: auto;
+    }
+  }
+
+  .contactUs {
+    background: #ffffff var(--bg-contact-) no-repeat right;
+
+    > h1 {
+      font-size: 4.2rem;
+      padding-left: 0;
+    }
+    > h1,
+    input,
+    textarea,
+    button {
+      margin-left: 11rem;
+    }
+    > input,
+    textarea {
+      width: 60rem;
+    }
+    > .inputName {
+      background: #fff var(--bg-inputName-) no-repeat left;
+    }
+    > .inputEmail {
+      background: #fff var(--bg-inputEmail-) no-repeat left;
     }
   }
 }
