@@ -8,14 +8,3 @@ const changeBackground = () => {
 
   console.log(divAstrounat.offsetWidth);
 };
-
-const question = () => {
-  if (
-    prompt("Voce quer sair comigo, um cara bonito, magico e programador??") ===
-    "sim"
-  ) {
-    prompt("aeee kkkkk, me fala que eu nao sei a resposta :DDDD");
-  } else {
-    prompt("me bloqueia e me ignora kkkkkkkkkkk");
-  }
-};
