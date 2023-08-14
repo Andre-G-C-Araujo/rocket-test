@@ -93,6 +93,7 @@ body {
     }
 
     > img {
+      display: block;
       width: 8.1rem;
       height: 8.1rem;
     }
