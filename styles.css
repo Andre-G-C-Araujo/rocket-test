@@ -30,25 +30,28 @@ body {
   width: var(--bigSize-);
   height: var(--hugeSize);
 
-  background: #f9f4fb var(--bg-mobile-) no-repeat;
+  background: #f9f4fb;
+  .rightContentTop {
+    > .astronaut {
+      display: block;
+      margin: auto;
+    }
+  }
+  .leftContentTop {
+    > h1 {
+      font-size: var(--sizeMediumB-);
+      color: #b52184;
+    }
 
-  > .astronaut {
-    display: block;
-    margin: auto;
-  }
-  > h1 {
-    font-size: var(--sizeMediumB-);
-  }
-
-  > h3 {
-    font-size: var(--sizeSmallB-);
-  }
-  > h1,
-  h3 {
-    text-align: center;
+    > h3 {
+      font-size: 25px;
+    }
+    > h1,
+    h3 {
+      text-align: center;
+    }
   }
 }
-
 .setaBaixo {
   display: block;
   margin-left: auto;
@@ -180,35 +183,54 @@ body {
     justify-content: initial;
   }
 
-  .middleContent {
-    > .firstGrid,
-    .secondGrid,
-    .thirdGrid {
-      width: var(--hugeSize-);
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .rightContentTop,
+    .leftContentTop {
+      border: red solid 1px;
+      width: 50%;
+    }
+
+    .middleContent {
+      display: flex;
+
+      > .firstGrid,
+      .secondGrid,
+      .thirdGrid {
+        width: var(--hugeSize-);
+        > h1 {
+          text-align: center;
+        }
+        > img {
+          width: 8.1rem;
+          height: 8.1rem;
+        }
+      }
+    }
+
+    .contactUs {
       > h1 {
         text-align: center;
       }
-      > img {
-        display: block;
+      > input {
+        width: var(--hugeSize-);
+      }
+      > textarea {
+        width: var(--hugeSize-);
+      }
+      > button {
         margin: auto;
-        width: 8.1rem;
-        height: 8.1rem;
       }
     }
   }
+}
 
-  .contactUs {
-    > h1 {
-      text-align: center;
-    }
-    > input {
-      width: var(--hugeSize-);
-    }
-    > textarea {
-      width: var(--hugeSize-);
-    }
-    > button {
-      margin: auto;
-    }
-  }
+#buttonjulia {
+  margin-top: 5px;
+  height: 100px;
+  width: 100px;
+  color: white;
+  background: red;
 }

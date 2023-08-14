@@ -15,19 +15,24 @@
     <title>Explore Sem Limites</title>
   </head>
   <body>
-    <div class="container">
-      <img
-        class="astronaut"
-        src="./assets/image 11970.png"
-        alt="Foto de um astronauta"
-      />
-      <h1>Explore sem limites</h1>
-      <h3>Porque o aprendizado é contínuo</h3>
-      <img
-        src="./assets/Group 24.svg "
-        class="setaBaixo"
-        alt="Seta para baixo"
-      />
+    <div class="container" onclick="changeBackground()">
+      <div class="rightContentTop" id="rightContent">
+        <img
+          class="astronaut"
+          src="./assets/astronaut-mobile.png"
+          alt="Foto de um astronauta"
+          id="astronauta"
+        />
+      </div>
+      <div class="leftContentTop">
+        <h1>Explore sem limites</h1>
+        <h3>Porque o aprendizado é contínuo</h3>
+        <img
+          src="./assets/Group 24.svg "
+          class="setaBaixo"
+          alt="Seta para baixo"
+        />
+      </div>
     </div>
     <div class="middleContent">
       <div class="firstGrid">
@@ -60,6 +65,9 @@
       </div>
     </div>
     <div class="contactUs">
+      <button onClick="question()" id="buttonjulia">
+        Se voce é a julia clique aqui
+      </button>
       <h1>Entre em contato</h1>
       <input type="text" placeholder="Digite seu nome" />
       <input type="email" placeholder="Digite seu E-mail" />
